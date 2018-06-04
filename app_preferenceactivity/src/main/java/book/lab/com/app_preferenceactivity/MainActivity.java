@@ -46,3 +46,34 @@ public class MainActivity extends PreferenceActivity {
 		}
 	}
 }
+
+
+/*
+ // 監聽[安全模式]
+            Preference pref = findPreference("apply_bg");
+            pref.setOnPreferenceChangeListener(
+                    new OnPreferenceChangeListener() {
+                        @Override
+                        public boolean onPreferenceChange(Preference p,
+                                                          Object newValue) {
+                            //Log.v("mytag",p.getKey()+"---" +newValue);
+                            Toast.makeText(context,
+                                    p.getKey() + ":" + newValue,
+                                    Toast.LENGTH_SHORT).show();
+
+                            WallpaperManager wm = WallpaperManager.getInstance(getApplicationContext());
+                            try {
+                                if (newValue.toString().equals("winter")) {
+                                    wm.setResource((int) R.drawable.winter);
+                                } else {
+                                    wm.setResource((int) R.drawable.desert);
+                                }
+
+                            } catch (Exception e) {
+                                e.printStackTrace();
+                            }
+                            return true;
+                        }
+                    })
+
+*/
